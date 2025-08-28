@@ -16,7 +16,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "backgroundMode": [
+        "audio"
+      ],
+      "package": "com.ellvius.smartdripmonitor",
+      "usesCleartextTraffic": true
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +38,25 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+            "expo-build-properties",
+            {
+            "android": {
+                "usesCleartextTraffic": true
+            }
+            }
+        ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d1006c17-8f5f-4503-8279-9a5191a06810"
+      }
+    },
+    "owner": "ellvius"
   }
 }
